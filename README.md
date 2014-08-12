@@ -6,3 +6,8 @@ Video Converter UI for FFMPEG, developed with ActionScript 3.0 Adobe AIR Platfor
 - Basic User Interface (MinimalComps)
 - Optimazed for Windows usage, will support for Mac OS X.
 - MP4 faststart fix by moving metadata and offset information to the front of the file. (a.k.a. qt-faststart algorithm)
+
+=================
+
+**E-Mail:** ararat@ispiroglu.com
+**Twitter:** https://twitter.com/araratispiroglu
