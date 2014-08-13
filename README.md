@@ -1,7 +1,7 @@
 ARTVideoConverter (Alpha version)
 =================
 
-![](/https://raw.githubusercontent.com/araratispiroglu/ARTVideoConverter/master/screenshot.png)
+![ScreenShot](https://raw.github.com/araratispiroglu/ARTVideoConverter/master/screenshot.png)
 
 Video Converter UI for FFMPEG, developed with ActionScript 3.0 Adobe AIR Platform. Converts any kind of video file to H.264/MPEG-4 (.mp4) format for Web & Mobile video playback support.
 
