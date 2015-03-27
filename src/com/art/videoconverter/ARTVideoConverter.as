@@ -1,5 +1,6 @@
 package com.art.videoconverter
 {
+	import flash.system.Capabilities;
 	import com.bit101.components.IndicatorLight;
 	import com.bit101.components.Label;
 	import com.bit101.components.List;
@@ -62,7 +63,7 @@ package com.art.videoconverter
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			stage.nativeWindow.addEventListener(Event.CLOSING, onClose);
 			
-			defaultConvertLocation = File.desktopDirectory.nativePath + "\\converted\\";
+			defaultConvertLocation = File.desktopDirectory.nativePath + PathSeperatorNotation + "converted" + PathSeperatorNotation;
 			
 			title = new Label(this, 0, 0, "ART Video Converter");
 			var tf:TextFormat = title.textField.getTextFormat();
@@ -201,7 +202,7 @@ package com.art.videoconverter
 					var folder:File = new File();
 					folder.addEventListener(Event.SELECT, function(e:Event):void
 					{
-						outputDic.text = File(e.currentTarget).nativePath + "\\";
+						outputDic.text = File(e.currentTarget).nativePath + PathSeperatorNotation;
 					});
 					folder.browseForDirectory("");
 					break;
@@ -368,6 +369,16 @@ package com.art.videoconverter
 				close.x = (window.width - close.width) / 2;
 				close.y = window.height - close.height - 30;
 			}
+		}
+		
+		public static function get IsSystemWindows():Boolean
+		{
+			return Capabilities.os.indexOf("Windows") >= 0;	
+		}
+		
+		public static function get PathSeperatorNotation():String
+		{
+			return IsSystemWindows ? "\\" : "/";
 		}
 	}
 }

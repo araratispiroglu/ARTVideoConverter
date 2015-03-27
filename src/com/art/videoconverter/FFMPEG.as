@@ -26,7 +26,14 @@ package com.art.videoconverter
 			_nativeProcessStartupInfo = new NativeProcessStartupInfo();
 			
 			// set executable to the location of ffmpeg.exe
-			_nativeProcessStartupInfo.executable = File.applicationDirectory.resolvePath("ffmpeg.exe");
+			var executable:String = "ffmpeg";
+			
+			if (ARTVideoConverter.IsSystemWindows)
+			{
+				executable += ".exe";
+			}
+			
+			_nativeProcessStartupInfo.executable = File.applicationDirectory.resolvePath(executable);
 			
 			_processArgs = new Vector.<String>();
 			_processArgs.push('-y'); // always overwrite existing file
